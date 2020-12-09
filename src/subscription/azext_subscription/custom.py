@@ -75,7 +75,7 @@ def _object_id_args_helper(cli_ctx, object_id=None, spn=None, upn=None):
 
 
 def cli_subscription_create(cmd, client, enrollment_account_name, offer_type,
-                            display_name=None, owner_object_id="", owner_spn="",
+                            display_name, owner_object_id="", owner_spn="",
                             owner_upn=""):
     owners = [_object_id_args_helper(cmd.cli_ctx, object_id=x) for x
               in owner_object_id.split(',') if owner_object_id] + \
